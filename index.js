@@ -35,7 +35,7 @@ if (!process.env.TESTING) {
   await server.start();
   app.use(mountPath, server.app);
 
-  const options = { };
+  const options = { allowInsecureHTTP: true };
   const dashboard = new ParseDashboard({
     "apps": [
       {
