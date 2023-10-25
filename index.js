@@ -40,7 +40,7 @@ if (!process.env.TESTING) {
   const dashboard = new ParseDashboard({
     "apps": [
       {
-        "serverURL": config.serverURL,
+        "serverURL": process.env.PUBLIC_SERVER_URL || config.serverURL,
         "appId": config.appId,
         "masterKey": config.masterKey,
         "appName": "Parse",
